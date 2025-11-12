@@ -61,7 +61,6 @@
   background: v.$light-card-bg;
   color: v.$light-text;
   box-shadow: v.$alert-shadow;
-  border-color: v.$light-card-border;
 }
 
 .dark-mode {
@@ -69,7 +68,6 @@
     background: v.$dark-card-bg;
     color: v.$dark-text;
     box-shadow: v.$alert-shadow-dark;
-    border-color: v.$dark-card-border;
   }
 
   .tv-alert__close {
