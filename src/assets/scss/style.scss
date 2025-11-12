@@ -1,4 +1,4 @@
-@use "variables" as v;
+@use "variables";
 
 .tv-alert-container {
   position: fixed;
@@ -43,7 +43,7 @@
 .tv-alert {
   min-width: 300px;
   max-width: 420px;
-  border-radius: v.$alert-radius;
+  border-radius: variables.$alert-radius;
   overflow: hidden;
   pointer-events: auto;
   position: relative;
@@ -58,23 +58,23 @@
 }
 
 .tv-alert {
-  background: v.$light-card-bg;
-  color: v.$light-text;
-  box-shadow: v.$alert-shadow;
+  background: variables.$light-card-bg;
+  color: variables.$light-text;
+  box-shadow: variables.$alert-shadow;
 }
 
 .dark-mode {
   .tv-alert {
-    background: v.$dark-card-bg;
-    color: v.$dark-text;
-    box-shadow: v.$alert-shadow-dark;
+    background: variables.$dark-card-bg;
+    color: variables.$dark-text;
+    box-shadow: variables.$alert-shadow-dark;
   }
 
   .tv-alert__close {
-    color: v.$dark-text-secondary;
+    color: variables.$dark-text-secondary;
 
     &:hover {
-      color: v.$dark-text;
+      color: variables.$dark-text;
     }
   }
 
@@ -124,13 +124,13 @@
   line-height: 1;
   cursor: pointer;
   padding: 4px 8px;
-  color: v.$light-text-secondary;
+  color: variables.$light-text-secondary;
   border-radius: 6px;
   transition: all 0.15s ease;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);
-    color: v.$light-text;
+    color: variables.$light-text;
   }
 
   &:active {
@@ -178,54 +178,54 @@
 }
 
 .tv-alert--info {
-  border-left: 4px solid v.$info;
+  border-left: 4px solid variables.$info;
 
   .tv-alert__dot {
-    background: v.$info;
-    color: v.$info;
+    background: variables.$info;
+    color: variables.$info;
   }
 
   .tv-alert__progress-bar {
-    background: linear-gradient(90deg, v.$info-dark, v.$info);
+    background: linear-gradient(90deg, variables.$info-dark, variables.$info);
   }
 }
 
 .tv-alert--success {
-  border-left: 4px solid v.$success;
+  border-left: 4px solid variables.$success;
 
   .tv-alert__dot {
-    background: v.$success;
-    color: v.$success;
+    background: variables.$success;
+    color: variables.$success;
   }
 
   .tv-alert__progress-bar {
-    background: linear-gradient(90deg, v.$success-dark, v.$success);
+    background: linear-gradient(90deg, variables.$success-dark, variables.$success);
   }
 }
 
 .tv-alert--warning {
-  border-left: 4px solid v.$warning;
+  border-left: 4px solid variables.$warning;
 
   .tv-alert__dot {
-    background: v.$warning;
-    color: v.$warning;
+    background: variables.$warning;
+    color: variables.$warning;
   }
 
   .tv-alert__progress-bar {
-    background: linear-gradient(90deg, v.$warning-dark, v.$warning);
+    background: linear-gradient(90deg, variables.$warning-dark, variables.$warning);
   }
 }
 
 .tv-alert--error {
-  border-left: 4px solid v.$error;
+  border-left: 4px solid variables.$error;
 
   .tv-alert__dot {
-    background: v.$error;
-    color: v.$error;
+    background: variables.$error;
+    color: variables.$error;
   }
 
   .tv-alert__progress-bar {
-    background: linear-gradient(90deg, v.$error-dark, v.$error);
+    background: linear-gradient(90deg, variables.$error-dark, variables.$error);
   }
 }
 
