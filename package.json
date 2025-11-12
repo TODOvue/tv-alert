@@ -51,6 +51,8 @@
     "vue": "^3.0.0"
   },
   "devDependencies": {
+    "@todovue/tv-button": "^1.0.0",
+    "@todovue/tv-demo": "^1.0.0",
     "@vitejs/plugin-vue": "^6.0.0",
     "sass": "^1.0.0",
     "vite": "^7.0.0",
