@@ -1,7 +1,7 @@
 <script setup>
 import {defineAsyncComponent} from 'vue'
 import { TvButton } from '@todovue/tv-button'
-const TvAlert = defineAsyncComponent(/* webpackChunkName: "tvAlert" */() => import('../components/TvAlertDemo.vue'))
+const TvAlert = defineAsyncComponent(/* webpackChunkName: "tvAlert" */() => import('../components/TvAlert.vue'))
 import { useAlert } from '../composables/useAlert.js'
 
 const props = defineProps({
