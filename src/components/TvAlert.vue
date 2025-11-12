@@ -1,25 +1,21 @@
 <script setup>
-import { computed } from 'vue'
 import { useAlert } from '../composables/useAlert.js'
 
 const props = defineProps({
-  position: {
-    type: String,
-    default: 'top-right',
-    validator: v => [
-      'top-right',
-      'top-left',
-      'bottom-right',
-      'bottom-left',
-      'top-center',
-      'bottom-center'
-    ].includes(v)
-  },
   max: {
     type: Number,
     default: 8
   }
 })
+
+const positions = [
+  'top-right',
+  'top-center',
+  'top-left',
+  'bottom-right',
+  'bottom-center',
+  'bottom-left'
+]
 
 const {
   alerts,
@@ -28,13 +24,13 @@ const {
   resumeAlert
 } = useAlert()
 
-const stackedAlerts = computed(() => {
-  const list = alerts.value.filter(a => a.position === props.position)
+const getStackedAlerts = (position) => {
+  const list = alerts.value.filter(a => a.position === position)
   return list.slice(0, props.max)
-})
+}
 
-const positionClass = computed(() => `tv-alert-container--${props.position}`)
-const transitionName = computed(() => `tv-slide-${props.position.includes('bottom') ? 'up' : 'down'}`)
+const getPositionClass = (position) => `tv-alert-container--${position}`
+const getTransitionName = (position) => `tv-slide-${position.includes('bottom') ? 'up' : 'down'}`
 
 const close = (id) => {
   removeAlert(id)
@@ -49,14 +45,16 @@ const resume = (id) => {
 
 <template>
   <div
+    v-for="position in positions"
+    :key="position"
     class="tv-alert-container"
-    :class="positionClass"
+    :class="getPositionClass(position)"
     aria-live="polite"
     aria-atomic="false"
   >
-    <TransitionGroup :name="transitionName" tag="div" class="tv-alert-stack">
+    <TransitionGroup :name="getTransitionName(position)" tag="div" class="tv-alert-stack">
       <div
-        v-for="item in stackedAlerts"
+        v-for="item in getStackedAlerts(position)"
         :key="item.id"
         class="tv-alert"
         :class="[`tv-alert--${item.type}`, { 'tv-alert--paused': item.paused }]"
