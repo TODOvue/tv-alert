@@ -1,4 +1,5 @@
 import TvAlert from './components/TvAlert.vue'
+import './style.scss'
 
 (TvAlert as any).install = (app: any) => {
   app.component('TvAlert', TvAlert)

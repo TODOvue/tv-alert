@@ -5,8 +5,15 @@
 A flexible, framework‑agnostic Vue 3 alert/notification component with multiple positions, types, progress bar, pause on hover, and customization utilities. Ship it in Single Page Apps or Server-Side Rendered (SSR) environments (e.g. Nuxt 3) with zero DOM assumptions.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd1c4584-cadf-444b-a70a-8370df7d0dd0/deploy-status)](https://app.netlify.com/projects/tv-alert/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
+[![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
 ![License](https://img.shields.io/github/license/TODOvue/tv-alert)
+![Release Date](https://img.shields.io/github/release-date/TODOvue/tv-alert)
+![Bundle Size](https://img.shields.io/bundlephobia/minzip/@todovue/tv-alert)
+![Node Version](https://img.shields.io/node/v/@todovue/tv-alert)
+![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-alert)
+![Stars](https://img.shields.io/github/stars/TODOvue/tv-alert?style=social)
 
 > Demo: https://tv-alert.netlify.app/
 
@@ -64,11 +71,13 @@ Global registration (main.js / main.ts):
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import TvAlert from '@todovue/tv-alert'
 
-createApp(App)
-  .use(TvAlert) // enables <TvAlert /> globally
-  .mount('#app')
+import '@todovue/tv-alert/style.css'
+import { TvAlert } from '@todovue/tv-alert'
+
+const app = createApp(App)
+app.component('TvAlert', TvAlert)
+app.mount('#app')
 ```
 
 In your root component (App.vue):
@@ -101,17 +110,26 @@ function showNotification() {
 
 ---
 ## Nuxt 3 / SSR Usage
-Create a plugin file: `plugins/tv-alert.client.ts` (client-only is fine, or without suffix for SSR as it is safe):
-```ts
-import { defineNuxtPlugin } from '#app'
-import TvAlert from '@todovue/tv-alert'
 
-export default defineNuxtPlugin(nuxtApp => {
-  nuxtApp.vueApp.use(TvAlert)
+**Step 1:** Add the stylesheet to your `nuxt.config.ts`:
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  css: ['@todovue/tv-alert/style.css'],
 })
 ```
 
-Add the component to your app.vue or layout:
+**Step 2:** Create a plugin file: `plugins/tv-alert.client.ts` (client-only is fine, or without suffix for SSR as it is safe):
+```ts
+import { defineNuxtPlugin } from '#app'
+import { TvAlert } from '@todovue/tv-alert'
+
+export default defineNuxtPlugin(nuxtApp => {
+  nuxtApp.vueApp.component('TvAlert', TvAlert)
+})
+```
+
+**Step 3:** Add the component to your app.vue or layout:
 ```vue
 <template>
   <div>
