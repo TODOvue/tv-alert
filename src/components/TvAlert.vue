@@ -83,6 +83,4 @@ const resume = (id) => {
   </div>
 </template>
 
-<style scoped lang="scss">
-@use '../assets/scss/style.scss';
-</style>
+<style></style>
