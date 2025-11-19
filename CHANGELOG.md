@@ -9,7 +9,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [1.0.2] - 2025-11-18
 ### 🐛 Fixed
 - **BREAKING FIX**: Exported `useAlert` composable from the library entry point (`src/entry.ts`). Previously, the composable was not accessible when importing from `@todovue/tv-alert`, causing errors when trying to use `import { useAlert } from '@todovue/tv-alert'`.
-- Added TypeScript type definitions for `useAlert` composable with complete interface definitions for `AlertOptions`, `Alert`, `AlertAPI`, and `UseAlertReturn`.
 - Fixed incorrect imports in demo files that were importing from `@todovue/tv-button` instead of `@todovue/tv-alert`.
 
 ### ✨ Added

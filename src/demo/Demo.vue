@@ -13,7 +13,7 @@ const TvAlert = defineAsyncComponent(/* webpackChunkName: "tvAlert" */() => impo
     npmInstall="@todovue/tv-alert"
     sourceLink="https://github.com/TODOvue/tv-alert"
     urlClone="https://github.com/TODOvue/tv-alert.git"
-    version="1.0.1"
+    version="1.0.2"
   />
 </template>
 
