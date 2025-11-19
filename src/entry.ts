@@ -1,4 +1,5 @@
 import TvAlert from './components/TvAlert.vue'
+import { useAlert } from './composables/useAlert.js'
 import './style.scss'
 
 (TvAlert as any).install = (app: any) => {
@@ -11,5 +12,5 @@ export const TvAlertPlugin = {
   }
 }
 
-export { TvAlert }
+export { TvAlert, useAlert }
 export default TvAlert
