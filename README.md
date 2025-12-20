@@ -5,7 +5,6 @@
 A flexible, framework‑agnostic Vue 3 alert/notification component with multiple positions, types, progress bar, pause on hover, and customization utilities. Ship it in Single Page Apps or Server-Side Rendered (SSR) environments (e.g. Nuxt 3) with zero DOM assumptions.
 
 [![npm](https://img.shields.io/npm/v/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/fd1c4584-cadf-444b-a70a-8370df7d0dd0/deploy-status)](https://app.netlify.com/projects/tv-alert/deploys)
 [![npm downloads](https://img.shields.io/npm/dm/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
 [![npm total downloads](https://img.shields.io/npm/dt/@todovue/tv-alert.svg)](https://www.npmjs.com/package/@todovue/tv-alert)
 ![License](https://img.shields.io/github/license/TODOvue/tv-alert)
@@ -15,7 +14,7 @@ A flexible, framework‑agnostic Vue 3 alert/notification component with multipl
 ![Last Commit](https://img.shields.io/github/last-commit/TODOvue/tv-alert)
 ![Stars](https://img.shields.io/github/stars/TODOvue/tv-alert?style=social)
 
-> Demo: https://tv-alert.netlify.app/
+> Demo: https://ui.todovue.blog/alert
 
 ---
 ## Table of Contents
