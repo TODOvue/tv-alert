@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- Enhanced the Alert component with support for customizable icons and titles.
+- Added action slots to the Alert component to support interactive elements within notifications.
+
 ### Dependencies
 - Updated the `@todovue/tv-button` dependency to `^1.2.4`.
 - Updated the `@todovue/tv-demo` dependency to `^1.4.4`.
