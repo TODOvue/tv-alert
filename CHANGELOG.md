@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.2.0] - 2026-01-20
 
 ### Added
 - Enhanced the Alert component with support for customizable icons and titles.
@@ -97,6 +97,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Reactive alerts array access
 - Tree-shakeable ES module build
 
+[1.2.0]: https://github.com/TODOvue/todovue-alert/pull/7/files
+[1.1.1]: https://github.com/TODOvue/todovue-alert/pull/6/files
 [1.1.0]: https://github.com/TODOvue/todovue-alert/pull/5/files
 [1.0.2]: https://github.com/TODOvue/todovue-alert/pull/4/files
 [1.0.1]: https://github.com/TODOvue/todovue-alert/pull/3/files

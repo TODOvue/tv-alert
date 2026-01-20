@@ -8,6 +8,7 @@
   "type": "module",
   "homepage": "https://ui.todovue.blog/alert",
   "repository": {
+    "name": "@todovue/tv-alert",
     "type": "git",
     "url": "git+https://github.com/TODOvue/tv-alert.git"
   },
