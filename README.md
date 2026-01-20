@@ -16,7 +16,6 @@ A flexible, framework‑agnostic Vue 3 alert/notification component with multipl
 
 > Demo: https://ui.todovue.blog/alert
 
----
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
@@ -35,7 +34,6 @@ A flexible, framework‑agnostic Vue 3 alert/notification component with multipl
 - [Contributing](#contributing)
 - [License](#license)
 
----
 ## Features
 - Multiple alert types: info, success, warning, error
 - Six position options: top-right, top-center, top-left, bottom-right, bottom-center, bottom-left
@@ -49,7 +47,6 @@ A flexible, framework‑agnostic Vue 3 alert/notification component with multipl
 - Works in SPA and SSR (Nuxt 3) contexts
 - Tree-shake friendly (Vue marked external in library build)
 
----
 ## Installation
 Using npm:
 ```bash
@@ -64,7 +61,6 @@ Using pnpm:
 pnpm add @todovue/tv-alert
 ```
 
----
 ## Quick Start (SPA)
 Global registration (main.js / main.ts):
 ```js
@@ -107,7 +103,6 @@ function showNotification() {
 </template>
 ```
 
----
 ## Nuxt 3 / SSR Usage
 
 **Step 1:** Add the stylesheet to your `nuxt.config.ts`:
@@ -154,7 +149,6 @@ function notify() {
 </script>
 ```
 
----
 ## Component Registration Options
 | Approach                                                          | When to use                                    |
 |-------------------------------------------------------------------|------------------------------------------------|
@@ -162,7 +156,6 @@ function notify() {
 | Local named import `{ TvAlert }`                                  | When you need multiple alert containers        |
 | Direct default import `import TvAlert from '@todovue/tv-alert'`   | Single usage or manual registration            |
 
----
 ## Props
 The `TvAlert` component accepts the following props:
 
@@ -175,12 +168,12 @@ Example:
 <TvAlert :max="5" />
 ```
 
----
 ## Alert Options
 When calling `alert.open()` or type-specific methods, you can pass an options object:
 
 | Option        | Type    | Default      | Description                                           |
 |---------------|---------|--------------|-------------------------------------------------------|
+| title         | String  | null         | Optional bold title above the message                 |
 | message       | String  | ''           | The message to display in the alert                   |
 | type          | String  | 'info'       | Alert type: 'info', 'success', 'warning', or 'error'  |
 | position      | String  | 'top-right'  | Position of the alert (see Positions section)         |
@@ -188,6 +181,10 @@ When calling `alert.open()` or type-specific methods, you can pass an options ob
 | showClose     | Boolean | true         | Show/hide close button                                |
 | pauseOnHover  | Boolean | true         | Pause auto-dismiss timer on mouse hover               |
 | showProgress  | Boolean | true         | Show/hide progress bar                                |
+| icon          | String  | null         | Custom icon implementation (not widely used)          |
+| customIcon    | String  | null         | SVG/HTML string for a custom icon replacing default   |
+| actions       | Array   | []           | Array of action buttons: `{ label, handler(item) }`   |
+| allowHtml     | Boolean | false        | Allow HTML content in the message                     |
 
 Example:
 ```js
@@ -202,7 +199,6 @@ alert.open({
 })
 ```
 
----
 ## Composable API (useAlert)
 The `useAlert` composable provides methods to manage alerts programmatically:
 
@@ -250,7 +246,6 @@ console.log(alerts.value) // Array of current alerts
 | removeAlert()   | id               | void    | Remove specific alert by ID          |
 | clearAll()      | none             | void    | Remove all alerts                    |
 
----
 ## Positions
 TvAlert supports six different positions:
 
@@ -267,7 +262,6 @@ alert.success('Top left notification', { position: 'top-left' })
 alert.warning('Bottom center notification', { position: 'bottom-center' })
 ```
 
----
 ## Alert Types
 Four alert types are available, each with its own color scheme:
 
@@ -284,7 +278,6 @@ alert.warning('Please review your input')
 alert.error('An error occurred')
 ```
 
----
 ## Customization (Styles / Theming)
 The component uses SCSS variables for theming. You can customize the appearance by overriding the CSS variables or by modifying the SCSS variables:
 
@@ -309,21 +302,18 @@ For advanced customization, you can override the CSS classes:
 }
 ```
 
----
 ## Accessibility
 - Each alert container has `aria-live="polite"` for screen reader announcements
 - Individual alerts have `role="status"` for proper ARIA semantics
 - Close buttons include `aria-label` for accessibility
 - Keyboard navigation supported (close button is focusable)
 
----
 ## SSR Notes
 - No direct DOM (`window` / `document`) access in source → safe for SSR
 - Styles are automatically applied when you import the library
 - Works seamlessly with Nuxt 3 and other SSR frameworks
 - The composable uses Vue's reactivity system, compatible with SSR
 
----
 ## Development
 ```bash
 git clone https://github.com/TODOvue/tv-alert.git
@@ -334,14 +324,11 @@ npm run build   # build library
 ```
 Local demo served from Vite using `index.html` + `src/demo` examples.
 
----
 ## Contributing
 PRs and issues welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
----
 ## License
 MIT © TODOvue
 
----
 ### Attributions
 Crafted for the TODOvue component ecosystem

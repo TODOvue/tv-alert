@@ -44,13 +44,18 @@ function handleClick() {
       }, config.delay || index * 500)
     })
   } else {
-    const { message, type, position, duration, pauseOnHover, showProgress, showClose } = props.alertConfig
+    const { message, type, position, duration, pauseOnHover, showProgress, showClose, title, icon, customIcon, actions, allowHtml } = props.alertConfig
     alert[type](message, {
       position: position || 'top-right',
       duration: duration || 4000,
       pauseOnHover: pauseOnHover !== undefined ? pauseOnHover : true,
       showProgress: showProgress !== undefined ? showProgress : true,
-      showClose: showClose !== undefined ? showClose : true
+      showClose: showClose !== undefined ? showClose : true,
+      title,
+      icon,
+      customIcon,
+      actions,
+      allowHtml
     })
   }
 }

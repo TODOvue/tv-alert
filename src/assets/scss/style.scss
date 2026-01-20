@@ -84,11 +84,15 @@
 }
 
 .tv-alert__content {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
+  display: flex;
+  align-items: flex-start;
   gap: 12px;
   padding: 16px;
+}
+
+.tv-alert__icon {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .tv-alert__dot {
@@ -98,6 +102,7 @@
   display: inline-block;
   box-shadow: 0 0 8px currentColor;
   animation: pulse 2s ease-in-out infinite;
+  margin-top: 6px;
 }
 
 @keyframes pulse {
@@ -111,13 +116,52 @@
   }
 }
 
+.tv-alert__body {
+  flex-grow: 1;
+  min-width: 0; 
+}
+
+.tv-alert__title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.4;
+  font-size: 15px;
+}
+
 .tv-alert__message {
   font-size: 14px;
   line-height: 1.5;
-  font-weight: 500;
+  font-weight: 400;
+  color: inherit;
+  opacity: 0.9;
+}
+
+.tv-alert__actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tv-alert__action-btn {
+  background: transparent;
+  border: 1px solid currentColor;
+  color: inherit;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+    background: rgba(0,0,0,0.05);
+  }
 }
 
 .tv-alert__close {
+  flex-shrink: 0;
   border: 0;
   background: transparent;
   font-size: 20px;
@@ -127,6 +171,9 @@
   color: variables.$light-text-secondary;
   border-radius: 6px;
   transition: all 0.15s ease;
+  margin-left: auto;
+  margin-top: -4px;
+  margin-right: -8px;
 
   &:hover {
     background: rgba(0, 0, 0, 0.05);

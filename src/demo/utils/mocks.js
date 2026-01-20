@@ -8,6 +8,9 @@ import BottomCenter from './demos/bottom-center.vue?raw';
 import NoProgress from './demos/no-progress.vue?raw';
 import NoClose from './demos/no-close.vue?raw';
 import NoPause from './demos/no-pause.vue?raw';
+import WithTitle from './demos/with-title.vue?raw';
+import WithActions from './demos/with-actions.vue?raw';
+import WithHtml from './demos/with-html.vue?raw';
 
 export const demos = [
   {
@@ -209,5 +212,65 @@ export const demos = [
       }
     },
     html: NoPause,
+  },
+  {
+    id: 11,
+    title: "With Title",
+    description: "Alert with a title",
+    propsData: {
+      buttonConfig: {
+        variant: 'success',
+        label: 'With Title'
+      },
+      alertConfig: {
+        title: 'Well done!',
+        message: 'Operation completed successfully',
+        type: 'success',
+        position: 'top-right',
+        duration: 4000
+      }
+    },
+    html: WithTitle,
+  },
+  {
+    id: 12,
+    title: "With Actions",
+    description: "Alert with action buttons",
+    propsData: {
+      buttonConfig: {
+        variant: 'info',
+        label: 'With Actions'
+      },
+      alertConfig: {
+        message: 'Update available',
+        type: 'info',
+        position: 'top-right',
+        duration: 8000,
+        actions: [
+          { label: 'Update', handler: (item) => console.log('Update clicked', item) },
+          { label: 'Later', handler: () => console.log('Later clicked') }
+        ]
+      }
+    },
+    html: WithActions,
+  },
+  {
+    id: 13,
+    title: "With HTML",
+    description: "Alert with HTML content",
+    propsData: {
+      buttonConfig: {
+        variant: 'warning',
+        label: 'With HTML'
+      },
+      alertConfig: {
+        message: 'Please review the <b>Terms of Service</b> before proceeding.',
+        type: 'warning',
+        position: 'top-right',
+        duration: 5000,
+        allowHtml: true
+      }
+    },
+    html: WithHtml,
   }
 ]

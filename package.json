@@ -8,6 +8,7 @@
   "type": "module",
   "homepage": "https://ui.todovue.blog/alert",
   "repository": {
+    "name": "@todovue/tv-alert",
     "type": "git",
     "url": "git+https://github.com/TODOvue/tv-alert.git"
   },
@@ -60,11 +61,11 @@
     "vue": "^3.5.26"
   },
   "devDependencies": {
-    "@todovue/tv-button": "^1.2.3",
-    "@todovue/tv-demo": "^1.2.7",
+    "@todovue/tv-button": "^1.2.4",
+    "@todovue/tv-demo": "^1.4.4",
     "@vitejs/plugin-vue": "^6.0.3",
-    "sass": "^1.97.1",
-    "vite": "^7.3.0",
+    "sass": "^1.97.2",
+    "vite": "^7.3.1",
     "vite-plugin-dts": "^4.5.4"
   }
 }
