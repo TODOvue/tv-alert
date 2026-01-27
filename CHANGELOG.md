@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Dependencies
 - Updated `@todovue/tv-demo` to `^1.4.11`.
+- Updated `@todovue/tv-button` to `^1.2.5`.
 - Updated `vue` to `^3.5.27`.
 - Updated `sass` to `^1.97.3`.
 
