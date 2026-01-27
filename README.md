@@ -20,7 +20,7 @@ A flexible, framework‑agnostic Vue 3 alert/notification component with multipl
 - [Features](#features)
 - [Installation](#installation)
 - [Quick Start (SPA)](#quick-start-spa)
-- [Nuxt 3 / SSR Usage](#nuxt-3--ssr-usage)
+- [Nuxt 4 / SSR Usage](#nuxt-4--ssr-usage)
 - [Component Registration Options](#component-registration-options)
 - [Props](#props)
 - [Alert Options](#alert-options)
@@ -103,7 +103,7 @@ function showNotification() {
 </template>
 ```
 
-## Nuxt 3 / SSR Usage
+## Nuxt 4 / SSR Usage
 
 **Step 1:** Add the stylesheet to your `nuxt.config.ts`:
 ```ts
